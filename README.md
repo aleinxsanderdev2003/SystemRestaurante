@@ -1,4 +1,25 @@
 <<<<<<< HEAD
+PASOS PARA TENER EL PROYECTO EN TU ENTORNO LOCAL:
+1.- CLONAR EL REPOSITORIO CON GIT EN UN ESCRITORIO
+git clone https://github.com/aleinxsanderdev2003/SystemRestaurante.git
+
+2.- Mover tu proyecto al repositorio clonado:
+Copia o mueve los archivos de tu proyecto al directorio clonado del repositorio.
+Agregar y hacer commit de los cambios:
+Navega al directorio del repositorio clonado y ejecuta los siguientes comandos para agregar los archivos y hacer commit de tus cambios:
+
+git add .
+git commit -m "Primer commit: Agrega mi proyecto"
+Enlazar tu repositorio local al repositorio remoto:
+
+3.-Ahora debemos enlazar tu repositorio local al nuevo repositorio en GitHub. Ejecuta los siguientes comandos:
+
+git remote add origin <URL_DEL_REPOSITORIO>
+Subir tu proyecto al repositorio remoto:
+
+Finalmente, ejecuta el siguiente comando para subir tus cambios al repositorio remoto:
+git push origin main
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
