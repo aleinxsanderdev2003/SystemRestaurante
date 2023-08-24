@@ -31,17 +31,7 @@
     </script>
 @endif
 
-<script>
-    Swal.fire({
-        icon: 'success',
-        title: '¡Bienvenido!',
-        text: 'Inicio de sesión exitoso',
-        toast: true,
-        position: 'middle',
-        showConfirmButton: false,
-        timer: 2000
-    });
-</script><style>
+<style>
      /* Estilos para el sidebar */
       #sidebar {
         width: 200px;

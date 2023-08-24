@@ -46,7 +46,6 @@
     .user-form button:hover {
       background-color: #005cbf;
     }
-
     </style>
 
     <div id="content" class="content-with-sidebar">
@@ -82,7 +81,6 @@
                             <button type="submit" class="btn btn-primary text-center"><i class="fas fa-save"></i> Guardar</button>
                         </div>
                         </form>
-
                     </div>
                 </div>
             </main>

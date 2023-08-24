@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdministracionController;
 use App\Http\Controllers\ClasificacionController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UsuarioManejador;
 use App\Http\Controllers\LogoController;
 use App\Http\Controllers\RestauranteController;
 use App\Http\Controllers\EnviowhatsappController;
@@ -40,7 +41,7 @@ Route::get('/orden', [PedidoController::class, 'orden'])->name('restaurante.orde
 
 /*rutas de login */
 Route::post('/login', [LoginController::class, 'login'])->name('login');
-Route::get('/iniciarsesion', [LoginController::class, 'index'])->name('login.iniciar_sesion');
+Route::get('/admin', [LoginController::class, 'index'])->name('login.iniciar_sesion');
 
 
 /*rutas de administracion */
@@ -91,50 +92,20 @@ Route::get('/restaurante/enviar-pedido-whatsapp/{nombreCliente}/{metodoEntrega}'
 Route::post('/restaurante/enviar-pedido-whatsapp', [PedidoController::class, 'enviarPedidoWhatsApp'])->name('enviar.pedido.whatsapp');
 // routes/web.php
 
+// RUTAS DE USUARIO EN LA WEB
+Route::get('/inicioSesionUsuario', [UsuarioManejador::class, 'mostrarLogin'])->name('usuario.login');
+Route::get('/registroUsuario', [UsuarioManejador::class, 'mostrarRegister'])->name('usuario.register');
+
+
+
+
+
 // Otras rutas existentes
 
 
 
-/*
-Route::get('/restaurante/enviar-pedido-whatsapp', function () {
-    $pedidos = json_decode(request()->cookie('pedidos'), true);
-    $total = 0;
-    $mensaje = "Carrito de pedido:\n";
 
-    if ($pedidos) {
-        foreach ($pedidos as $pedido) {
-            $nombre = $pedido['nombre'];
-            $precio = $pedido['precio'];
-            $mensaje .= "- $nombre: $precio\n";
-            $total += $precio;
-        }
-    }
 
-    $mensaje .= "\nTotal a pagar: $total\n";
-    $mensaje .= "Opción de entrega: " . request()->input('opcionEntrega');
 
-    // Configuración de Twilio
-    $accountSid = 'AC1e254bb60c84743dbc4e77bbca8e4095';
-    $authToken = 'a3ebfb3c2712ab4bc734d809f183e868';
-    $twilioNumber = '+14155238886';
+// Otras rutas existentes
 
-    // Número de destino de WhatsApp
-    $whatsappNumber = '+51933973546';
-
-    $client = new Client($accountSid, $authToken);
-
-    try {
-        $client->messages->create(
-            "whatsapp:$whatsappNumber",
-            [
-                'from' => "whatsapp:$twilioNumber",
-                'body' => $mensaje
-            ]
-        );
-
-        return response()->json(['success' => 'El pedido se ha enviado exitosamente por WhatsApp.']);
-    } catch (Exception $e) {
-        return response()->json(['error' => 'Hubo un error al enviar el pedido por WhatsApp. Por favor, inténtalo nuevamente.']);
-    }
-});
-*/
