@@ -304,7 +304,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
             <div class="menu-details">
                 <h5 class=" nombre__plato">{{ $plato->nombre }}</h5>
                 <p class="menu-description">{{ $plato->descripcion }}</p>
-                <p class="menu-price"><b>$ {{ $plato->precio }}</b></p>
+                <p class="menu-price"><b>S/ {{ $plato->precio }}</b></p>
                 <form action="{{ route('orden.store') }}" method="POST">
                     @csrf
                     <input type="hidden" name="nombre" value="{{ $plato->nombre }}">

@@ -16,7 +16,7 @@
 </head>
 <body>
     <style>
-        
+
         body{
         padding-top:4.2rem;
 		padding-bottom:4.2rem;
@@ -143,24 +143,24 @@
 			      <div class="myform form ">
                         <div class="logo mb-3">
                            <div class="col-md-12 text-center">
-                              <h1 >Signup</h1>
+                              <h1 >Registrarse</h1>
                            </div>
                         </div>
                         <form action="#" name="registration">
                            <div class="form-group">
-                              <label for="exampleInputEmail1">First Name</label>
+                              <label for="exampleInputEmail1">Primer Nombre</label>
                               <input type="text"  name="firstname" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="Enter Firstname">
                            </div>
                            <div class="form-group">
-                              <label for="exampleInputEmail1">Last Name</label>
+                              <label for="exampleInputEmail1">Apellido</label>
                               <input type="text"  name="lastname" class="form-control" id="lastname" aria-describedby="emailHelp" placeholder="Enter Lastname">
                            </div>
                            <div class="form-group">
-                              <label for="exampleInputEmail1">Email address</label>
+                              <label for="exampleInputEmail1">Correo Electronico</label>
                               <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
                            </div>
                            <div class="form-group">
-                              <label for="exampleInputEmail1">Password</label>
+                              <label for="exampleInputEmail1">Contraseña</label>
                               <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="Enter Password">
                            </div>
                            <div class="col-md-12 text-center mb-3">
@@ -168,7 +168,7 @@
                            </div>
                            <div class="col-md-12 ">
                               <div class="form-group">
-                                 <p class="text-center"><a href="#" id="signin">Already have an account?</a></p>
+                                 <p class="text-center"><a href="#" id="signin">Ya tienes una cuenta?</a></p>
                               </div>
                            </div>
                             </div>

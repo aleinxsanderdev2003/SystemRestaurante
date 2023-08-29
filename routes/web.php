@@ -95,7 +95,7 @@ Route::post('/restaurante/enviar-pedido-whatsapp', [PedidoController::class, 'en
 // RUTAS DE USUARIO EN LA WEB
 Route::get('/inicioSesionUsuario', [UsuarioManejador::class, 'mostrarLogin'])->name('usuario.login');
 Route::get('/registroUsuario', [UsuarioManejador::class, 'mostrarRegister'])->name('usuario.register');
-
+Route::get('/Portal-Usuario', [UsuarioManejador::class, 'mostrarPanel'])->name('usuario.panel');
 
 
 
